@@ -102,7 +102,7 @@ namespace LabCalculator
         {
             var left = WalkLeft(context);
             var right = WalkRight(context);
-            Debug.WriteLine("max({0},{1})", left, right);
+            Debug.WriteLine("min({0},{1})", left, right);
             if (left < right) return left;
             else return right;
         }
@@ -110,14 +110,14 @@ namespace LabCalculator
         {
             var left = WalkLeft(context);
             var right = WalkRight(context);
-            Debug.WriteLine("{0}MOD{1}", left, right);
+            Debug.WriteLine("{0}mod{1}", left, right);
             return left % right;
         }
         public override double VisitDivExp([NotNull] LabCalculatorParser.DivExpContext context)
         {
             var left = WalkLeft(context);
             var right = WalkRight(context);
-            Debug.WriteLine("{0}DIV{1}", left, right);
+            Debug.WriteLine("{0}div{1}", left, right);
             int res = (int)left / (int)right;
             return res;
         }
