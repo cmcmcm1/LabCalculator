@@ -117,7 +117,7 @@ namespace LabCalculator
         {
             var left = WalkLeft(context);
             var right = WalkRight(context);
-            Debug.WriteLine("{0}MOD{1}", left, right);
+            Debug.WriteLine("{0}DIV{1}", left, right);
             int res = (int)left / (int)right;
             return res;
         }
